@@ -3,6 +3,14 @@
     <style name="Base.Theme.AspindersAndroidLab" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/my_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/my_secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/my_text</item>
+        <!-- Customize your theme here. -->
+        <item name ="android:textColor">@color/my_text</item>
+
     </style>
 
     <style name="Theme.AspindersAndroidLab" parent="Base.Theme.AspindersAndroidLab" />
