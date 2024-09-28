@@ -1,33 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
-        android:text="@string/button_message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
 
-    <TextView
+        >
 
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="484dp"
-        android:text="@string/Hello_message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Switch
+            android:id="@+id/mySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="On"
+            android:textOff="Off"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Welcome To MyPage"
+            android:textColor="#86AD33"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+        <EditText
+            android:id="@+id/txtPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password 0 to 9"
+            android:inputType="numberPassword" />
+        <EditText
+            android:id="@+id/txtEmai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="date" />
+        <EditText
+            android:id="@+id/txtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColorHint="#FE8DAB"/>
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bg1" />
+
+        <Button
+            android:id="@+id/btnChangeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Image" />
+
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultView"
+            android:layout_marginTop="25dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="email|web"
+            android:text="For more details visit http://MyPage.com and send mail to support@MyPage.com" />
+
+
+
+
+        <!-- RadioGroup for selecting Gender -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Gender"
+            android:textSize="16sp"
+            android:paddingTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/radioOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+        </RadioGroup>
+
+        <!-- Button to submit gender selection -->
+        <Button
+            android:id="@+id/btnSubmitGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Gender" />
+
+
+        <CheckBox
+            android:id="@+id/chkJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="100dp"
+            android:text="Java"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox
+            android:id="@+id/chkPython"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:text="Python"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox
+            android:id="@+id/chkAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:text="Android"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox
+            android:id="@+id/chkAngular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="100dp"
+            android:text="AngularJS"
+            android:onClick="onCheckboxClicked"/>
+        <Button
+            android:id="@+id/getBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Get Details"
+            tools:ignore="DuplicateIds" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Action!"
+            />
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchMinWidth="56dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="120dp"
+                android:text="Switch1:"
+                android:checked="true"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchMinWidth="56dp"
+                android:layout_below="@+id/switch1"
+                android:layout_alignLeft="@+id/switch1"
+                android:text="Switch2:"
+                android:textOff="OFF"
+                android:textOn ="ON"/>
+            <Button
+                android:id="@+id/getBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="200dp"
+                android:text="Get" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
