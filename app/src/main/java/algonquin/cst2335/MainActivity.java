@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btnChangeImage = (Button) findViewById(R.id.btnChangeImage);
 
         // Set initial image
-        myImageView.setImageResource(R.drawable.bg1); // Assuming image1 is the initial image
+        myImageView.setImageResource(R.drawable.torch_app); // Assuming image1 is the initial image
 
         // Button action for submitting details
         btnSubmit.setOnClickListener(new View.OnClickListener() {
